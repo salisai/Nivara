@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Hero() {
     return (
@@ -50,12 +51,14 @@ export function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 1 }}
                     >
-                        <Button
-                            variant="outline"
-                            className="px-10 md:px-14 py-6 md:py-8 text-black border-white/20 hover:bg-white hover:text-primary transition-all duration-500 text-[10px] md:text-xs tracking-[0.3em] md:tracking-[0.4em] uppercase rounded-none border-[1px] backdrop-blur-md"
-                        >
-                            Explore Portfolio
-                        </Button>
+                        <Link href="/#projects">
+                            <Button
+                                variant="outline"
+                                className="px-10 md:px-14 py-6 md:py-8 text-black border-white/20 hover:bg-white hover:text-primary transition-all duration-500 text-[10px] md:text-xs tracking-[0.3em] md:tracking-[0.4em] uppercase rounded-none border-[1px] backdrop-blur-md"
+                            >
+                                Explore Portfolio
+                            </Button>
+                        </Link>
                     </motion.div>
                 </motion.div>
             </div>

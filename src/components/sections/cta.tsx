@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function FinalCTA() {
     return (
-        <section className="py-24 md:py-32 lg:py-48 bg-gradient-to-br from-[#FAF7F0] via-[#F5F1E8] to-[#D4AF37]/20 flex items-center justify-center">
+        <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-br from-[#FAF7F0] via-[#F5F1E8] to-[#D4AF37]/20 flex items-center justify-center">
             <div className="max-w-[1400px] mx-auto px-4 md:px-12 lg:px-24 text-center">
                 <motion.h2
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -31,12 +32,14 @@ export function FinalCTA() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true }}
                 >
-                    <Button
-                        variant="outline"
-                        className="px-12 py-8 text-primary border-primary hover:bg-primary hover:text-white transition-all duration-300 text-sm md:text-base tracking-[0.2em] uppercase rounded-none border-2"
-                    >
-                        Schedule Consultation
-                    </Button>
+                    <Link href="/contact">
+                        <Button
+                            variant="outline"
+                            className="px-12 py-8 text-primary border-primary hover:bg-primary hover:text-white transition-all duration-300 text-sm md:text-base tracking-[0.2em] uppercase rounded-none border-2"
+                        >
+                            Schedule Consultation
+                        </Button>
+                    </Link>
                 </motion.div>
             </div>
         </section>

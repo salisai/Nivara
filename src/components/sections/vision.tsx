@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function Vision() {
     return (
-        <section className="py-24 md:py-32 lg:py-48 bg-background flex items-center justify-center">
+        <section id="philosophy" className="py-4 md:py-16 lg:py-24 bg-background flex items-center justify-center">
             <div className="max-w-[1400px] w-full px-4 md:px-12 lg:px-24">
                 <div className="max-w-4xl">
                     <motion.h2

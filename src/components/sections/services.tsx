@@ -38,7 +38,7 @@ const services = [
 
 export function Services() {
     return (
-        <section id="services" className="py-24 md:py-32 lg:py-48 bg-background">
+        <section id="services" className="py-16 md:py-24 lg:py-32 bg-background">
             <div className="max-w-[1400px] mx-auto px-4 md:px-12 lg:px-24">
                 <div className="flex flex-col items-center text-center mb-24">
                     <motion.h2
@@ -71,7 +71,7 @@ export function Services() {
                             viewport={{ once: true }}
                             className="group"
                         >
-                            <div className="relative aspect-square overflow-hidden mb-8 shadow-2xl">
+                            <div className="relative aspect-square overflow-hidden mb-8 shadow-lg">
                                 <Image
                                     src={service.image}
                                     alt={service.title}

@@ -38,7 +38,7 @@ const projects = [
 
 export function Projects() {
     return (
-        <section className="py-24 md:py-32 lg:py-48 bg-background">
+        <section id="projects" className="py-16 md:py-24 lg:py-32 bg-background">
             <div className="max-w-[1400px] mx-auto px-4 md:px-12 lg:px-24">
                 <div className="flex flex-col justify-between mb-16 gap-8">
                     <motion.h2

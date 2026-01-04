@@ -27,10 +27,9 @@ export function Navbar() {
     }, [isOpen]);
 
     const navLinks = [
-        { name: "Work", href: "#work" },
-        { name: "Services", href: "#services" },
-        { name: "Vision", href: "#vision" },
-        { name: "Contact", href: "#contact" },
+        { name: "Work", href: "/#projects" },
+        { name: "Services", href: "/#services" },
+        { name: "About", href: "/about" },
     ];
 
     return (
@@ -42,7 +41,7 @@ export function Navbar() {
                 className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-700 px-6 md:px-12 lg:px-24 py-6 ${scrolled || isOpen ? "bg-background/95 backdrop-blur-xl border-b border-primary/10 py-4" : "bg-transparent"
                     }`}
             >
-                <div className="max-w-[1400px] mx-auto flex items-center justify-between">
+                <div className="max-w-[1400px] mx-auto flex items-center justify-between relative">
                     <Link
                         href="/"
                         className={`text-2xl font-sans font-light tracking-[0.2em] uppercase transition-colors duration-500 ${scrolled || isOpen ? "text-foreground" : "text-white"
@@ -51,8 +50,8 @@ export function Navbar() {
                         Nivara <span className="text-primary italic font-serif lowercase tracking-normal text-3xl">designs</span>
                     </Link>
 
-                    {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-12">
+                    {/* Desktop Navigation - Centered */}
+                    <div className="hidden md:flex items-center gap-12 absolute left-1/2 -translate-x-1/2">
                         {navLinks.map((item) => (
                             <Link
                                 key={item.name}
@@ -63,9 +62,15 @@ export function Navbar() {
                                 {item.name}
                             </Link>
                         ))}
-                        <button className="border border-primary text-primary px-8 py-3 text-[10px] tracking-[0.4em] uppercase hover:bg-primary hover:text-white transition-all duration-500 font-bold">
-                            Enquire
-                        </button>
+                    </div>
+
+                    {/* Right Side: Enquire Button */}
+                    <div className="hidden md:flex items-center">
+                        <Link href="/contact">
+                            <button className="border border-primary text-primary px-8 py-3 text-[10px] tracking-[0.4em] uppercase hover:bg-primary hover:text-white transition-all duration-500 font-bold">
+                                Enquire
+                            </button>
+                        </Link>
                     </div>
 
                     <button
